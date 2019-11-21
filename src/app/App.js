@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { getDataAPI } from "./getDataAPI";
+import ChosenCharacter from '../characterChoice2&3&4/chosen_character_4';
 
 
 
@@ -27,15 +28,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>YODER</h1>
+        <div id="logo">YODER</div>
         <h2>{this.state.test} you are!</h2>
 
         <h1>{this.state.testAPI}</h1>
 
         <Switch>
-          <Route exact path=""/>
-          <Route exact path=""/>
-          <Route exact path=""/>
+          <Route exact path="/"/>
+          <Route exact path="/"/>
+          <Route 
+            exact path="/chosencharacter"
+            render={() => <ChosenCharacter/>}/>
         </Switch>
         
       </div>
@@ -43,4 +46,4 @@ class App extends React.Component {
   }
 }
 
-export default withRouter(App);;
+export default withRouter(App);

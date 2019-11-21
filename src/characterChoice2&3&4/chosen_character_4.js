@@ -21,7 +21,7 @@ class ChosenCharacter extends Component {
                     </ul>
                 </div>
             </div>
-            <Link to="./hotornot"><button id="findMyLoveButton">Find my love!</button></Link>
+            <Link to="./wiseyoda"><button id="findMyLoveButton">Find my love!</button></Link>
         </>
         )
 

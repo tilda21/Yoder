@@ -15,7 +15,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      characters: []
+      characters: [],
+      chosenCharacter: {}
     };
   }
 
@@ -29,11 +30,9 @@ class App extends React.Component {
     this.FnGetDataAPI();
   }
 
-  // Mapping by gender
-  // const gender = GetData.map(character => character.gender)
-
-  //Mapping by user choice of gender, in this case female:
-  // console.log(gender.filter(gender => gender === 'female'))
+  handleChosenCharacter = (char) => {
+    this.setState({ chosenCharacter: char })
+  }
 
   render() {
     return (
@@ -74,12 +73,15 @@ class App extends React.Component {
             render={() => 
             <FilterByGender 
               characters={this.state.characters}
-              balloonMessage={this.props.balloonMessage} />}
+              balloonMessage={this.props.balloonMessage}
+              handleChosenCharacter={this.handleChosenCharacter} />}
           />
           <Route
             exact
             path="/chosencharacter"
-            render={() => <ChosenCharacter />}
+            render={() => 
+              <ChosenCharacter
+              chosenCharacter={this.state.chosenCharacter} />}
           />
           <Route
             exact

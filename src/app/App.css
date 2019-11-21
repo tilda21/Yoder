@@ -26,6 +26,11 @@ button.buttonstyle {
   text-transform: uppercase;
 }
 
+button:hover {
+ transform: scale(1.1);
+ transition: all 100ms ease-in;
+}
+
 div.centerdiv {
   text-align: center;
   margin: 20px auto 0px auto;

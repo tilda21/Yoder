@@ -24,6 +24,10 @@
   background-color: #49f46f;
 }
 
+.position:active{
+    background-color: white;
+}
+
 .position + .position {
   margin-left: 2em;
 }
@@ -31,6 +35,12 @@
 .feedback {
   padding-top: 2%;
   color: #49f46f;
+}
+
+.progressBar {
+ max-width: 6vh;
+  padding-top: 2%;
+  margin: 0 auto;
 }
 
 /* wedding */

@@ -3,6 +3,7 @@ import React from 'react';
 import './filter_2.css';
 import '../homepage1/homepage_1'
 import Homepage_1 from '../homepage1/homepage_1';
+import { Link } from 'react-router-dom';
 
 
 class FilterByGender extends React.Component {
@@ -11,6 +12,7 @@ class FilterByGender extends React.Component {
       this.state = {
         gender: '',
         filteredCharacters: [],
+        chosenCharacter: {}
       };
     }
     
@@ -29,6 +31,11 @@ class FilterByGender extends React.Component {
         return filteredCharacters;
     }
 
+    handleChosenCharacter = (char) => {
+        this.setState({ chosenCharacter: char })
+    }
+    
+    
         
     render(){
         return (
@@ -58,12 +65,23 @@ class FilterByGender extends React.Component {
          }/>
             <div id="filteredCharactersContainer">
                     {
-                        this.state.filteredCharacters.map(character => {
+                        this.state.filteredCharacters.map(character => { 
                             return (
-                            <div id="filteredCharactersChild">
-                                <img src={character.image} alt="character" key={character.id}/>
-                                <h2>{character.name}</h2>
-                                </div>
+                            <Link to="/chosencharacter"><div 
+                                id="filteredCharactersChild"
+                                value={character.name}
+                                onClick={() => this.handleChosenCharacter(character)
+                                }
+                                key={character.id}
+                                >
+                                    <img 
+                                        src={character.image} 
+                                        alt="character" 
+                                        key={character.id} 
+                                        />
+                                    <h2>{character.name}</h2>
+                            </div>
+                            </Link>
                             )
                         })
                     }

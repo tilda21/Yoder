@@ -19,10 +19,14 @@
 
 #filteredCharactersChild img{
     height: 30vh;
-    max-width:100%;
+    max-width: 100%;
     margin: 10px;
     padding: 5px 10px;
-    
+}
+
+#filteredCharactersChild h2{
+    margin-top: 0px;
+    padding-bottom: 10px;
 }
 
 .genderButton{
@@ -32,4 +36,10 @@
     text-transform: uppercase;
     margin: 10px;
     font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }

@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { Switch, Route, withRouter } from "react-router-dom";
 import { getDataAPI } from "./getDataAPI";
-import ChosenCharacter from '../characterChoice2&3&4/chosen_character_4';
-import Wedding from '../wedding7/wedding_7';
 import FilterByGender from '../characterChoice2&3&4/filter_2';
-
-
+import ChosenCharacter from "../characterChoice2&3&4/chosen_character_4";
+import Wedding from "../wedding7/wedding_7";
+import HotorNot from "../HotorNot/HotorNot";
+import Homepage_1 from "../homepage1/homepage_1";
+import "./yodalogo.png";
+import Button from "../auxiliaries/button";
 
 class App extends React.Component {
   constructor(props) {
@@ -22,24 +24,34 @@ class App extends React.Component {
     this.setState({characters: APIcharacters});
     
   }
+
+
   componentDidMount() {
     this.FnGetDataAPI();
   }
-  
+
   // Mapping by gender
   // const gender = GetData.map(character => character.gender)
-  
+
   //Mapping by user choice of gender, in this case female:
   // console.log(gender.filter(gender => gender === 'female'))
 
   render() {
+    console.log();
+
     return (
       <div className="App">
-        <div id="logo">YODER</div>
-
-
-        <Switch>
-          <Route exact path="/"/>
+      <div id="logo">
+          <img src="./yoderlogo.png"></img>
+        </div>
+    <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Homepage_1 balloonMessage="Welcome my galactic loveseeker! 💚" />
+            )}
+          />
           <Route 
             exact path="/character"
             render={() => <FilterByGender
@@ -48,11 +60,15 @@ class App extends React.Component {
           <Route 
             exact path="/chosencharacter"
             render={() => <ChosenCharacter/>}/>
+           <Route exact path="/hotornot" render={() => <HotorNot />} />
           <Route 
             exact path="/wedding"
             render={() => <Wedding/>}/>
-        </Switch>
+
         
+        
+
+        </Switch>
       </div>
     );
   }

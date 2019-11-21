@@ -12,7 +12,6 @@ class FilterByGender extends React.Component {
       this.state = {
         gender: '',
         filteredCharacters: [],
-        chosenCharacter: {}
       };
     }
     
@@ -31,11 +30,6 @@ class FilterByGender extends React.Component {
         return filteredCharacters;
     }
 
-    handleChosenCharacter = (char) => {
-        this.setState({ chosenCharacter: char })
-    }
-    
-    
         
     render(){
         return (
@@ -70,7 +64,7 @@ class FilterByGender extends React.Component {
                             <Link to="/chosencharacter"><div 
                                 id="filteredCharactersChild"
                                 value={character.name}
-                                onClick={() => this.handleChosenCharacter(character)
+                                onClick={() => this.props.handleChosenCharacter(character)
                                 }
                                 key={character.id}
                                 >

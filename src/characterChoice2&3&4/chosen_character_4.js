@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import Button from '../auxiliaries/button';
 import './chosen_character_4.css'
+import { Link } from 'react-router-dom';
 
 class ChosenCharacter extends Component {
 
     render(){
         return (
         <>
-            <h1>You are...</h1>
             <div id="container">
-                <div id="chosenImg">
-                    <img src="https://via.placeholder.com/300x400" alt="chosen character"/>
-                    <br/>
-                    Image of the character the user chose. will get this from state.
+                <div className="frame">
+                    <img src={this.props.chosenCharacter.image} alt="chosen character"/>
                 </div>
                 <div id="chosenDetails">
-                    <p>Details about chosen character, will also get this from state, passed as props?</p>
+                    <h1>{this.props.chosenCharacter.name}</h1>
+                    <ul>
+                        <li>Height: {this.props.chosenCharacter.height}m</li>
+                        <li>Homeworld: {this.props.chosenCharacter.homeworld}</li>
+                        <li>Species: {this.props.chosenCharacter.species}</li>
+                    </ul>
                 </div>
             </div>
-            <Button/>
+            <Link to="./hotornot"><button id="findMyLoveButton">Find my love!</button></Link>
         </>
         )
 

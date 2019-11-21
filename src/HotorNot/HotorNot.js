@@ -5,7 +5,7 @@ class HotorNot extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 0,
+      step: -1,
       position1: {
         image:
           "",
@@ -14,7 +14,7 @@ class HotorNot extends React.Component {
       position2: {
         image:
           "",
-        name: "C-3PO"
+        name: ""
       },
       userFavorite: {
           image: "",
@@ -24,29 +24,11 @@ class HotorNot extends React.Component {
     };
   }
   
-//   state.excluded characters begins with 20 as this is yoda
+//   state.excluded characters begins with 20 as this is yoda and we don't want to show him
   
 componentDidMount() {
-    this.definePosition1and2()
-    }
-
-    definePosition1and2 = () => {
-        const position1Object = dataSet[this.generateRandom()];
-        const position2Object = dataSet[this.generateRandom()];
-        const position1 = {
-            image: position1Object.image,
-            name: position1Object.name
-        }
-        const position2 = {
-            image: position2Object.image,
-            name: position2Object.name
-        }
-
-        this.setState({
-            position1: position1,
-            position2: position2
-
-        });
+    this.handlePosition1Click();
+    this.handlePosition2Click();
     }
     
 generateRandom = () => {
@@ -146,8 +128,8 @@ if (this.state.step <10) {
          
                 <img src={this.state.userFavorite.image} height="200vh"></img>
                 <h2> Congratulations 🎉</h2>
-                <p>You will be married to {this.state.userFavorite.name} for eternity</p>
-                <img src="http://pngimg.com/uploads/heart/heart_PNG51342.png" height="50px"></img>
+                <p>You will be married to {this.state.userFavorite.name} for all eternity</p>
+                💚
             </container>
             
 )

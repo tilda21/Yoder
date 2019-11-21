@@ -49,6 +49,7 @@ class App extends React.Component {
             render={() => (
               <>
                 <Homepage_1 balloonMessage="Choose a character" />
+                <Button message='start'/>
               </>
             )}
           />
@@ -58,7 +59,7 @@ class App extends React.Component {
             render={() => (
               <>
                 <Homepage_1 balloonMessage="You've found a love" />
-                <Button />
+                <Button  message='next'/>
               </>
             )}
           />

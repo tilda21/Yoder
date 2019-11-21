@@ -4,6 +4,7 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import { getDataAPI } from "./getDataAPI";
 import ChosenCharacter from '../characterChoice2&3&4/chosen_character_4';
 import Wedding from '../wedding7/wedding_7';
+import FilterByGender from '../characterChoice2&3&4/filter_2';
 
 
 
@@ -11,14 +12,15 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      test: 'Beautiful',
-      testAPI: '',
+      characters: [],
     };
   }
+  
   FnGetDataAPI = async () => {
     let GetData = await getDataAPI();
-    let character1 = GetData[0].name;
-    this.setState({testAPI: character1});
+    let APIcharacters = GetData;
+    this.setState({characters: APIcharacters});
+    
   }
   componentDidMount() {
     this.FnGetDataAPI();
@@ -34,13 +36,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <div id="logo">YODER</div>
-        <h2>{this.state.test} you are!</h2>
 
-        <h1>{this.state.testAPI}</h1>
 
         <Switch>
           <Route exact path="/"/>
-          <Route exact path="/"/>
+          <Route 
+            exact path="/character"
+            render={() => <FilterByGender
+            characters={this.state.characters}
+            />}/>
           <Route 
             exact path="/chosencharacter"
             render={() => <ChosenCharacter/>}/>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./HotorNot.css";
+import { Switch, Route, withRouter, Link } from "react-router-dom";
 
 class HotorNot extends React.Component {
   constructor(props) {
@@ -169,7 +170,10 @@ if (this.state.step <10) {
                 for all of eternity.
               </h2>
               💚
-            </div>
+              <div className="centerdiv">
+             <Link to="/character"><button className="buttonstyle">Play Again!</button></Link>
+        </div>
+        </div>
           </container>
         );
         }}}

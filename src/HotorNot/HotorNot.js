@@ -20,7 +20,7 @@ class HotorNot extends React.Component {
           image: "",
           name: ""
       },
-      excludedCharacters: [20]
+      excludedCharacters: [19]
     };
   }
   

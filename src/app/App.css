@@ -8,12 +8,12 @@ body{
   color: white;
 }
 
-h1{
-  font-size: 70px;
+#logo{
+  font-size: 90px;
+  margin-top: 40px;
+  font-weight: bold;
 }
 
-h2{
-  font-size: 40px;
-}
+
 
 

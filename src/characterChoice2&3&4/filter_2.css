@@ -1,0 +1,28 @@
+#filteredCharactersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+}
+
+#filteredCharactersChild {
+    margin: 10px;
+    
+}
+
+#filteredCharactersChild:hover {
+    background-color: #49f46f;
+    padding: 1% 3%;
+}
+
+#filteredCharactersChild img{
+    height: 30vh;
+    max-width:100%;    
+    
+}
+
+.genderButton{
+    
+}

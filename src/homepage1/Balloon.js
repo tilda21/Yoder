@@ -10,7 +10,7 @@ class Balloon extends React.Component {
     const { balloonMessage } = this.props;
 
     return (
-      <div class="speech-bubble">
+      <div className="speech-bubble">
         {balloonMessage}
       </div>
     );

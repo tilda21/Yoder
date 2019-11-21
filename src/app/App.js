@@ -83,12 +83,19 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/test"
+            path="/wiseyoda"
             render={() => (
               <>
-                <Homepage_1 balloonMessage="You've found a love" />
-                <Link to="/">
-                  <Button message="next" />
+                <Homepage_1 balloonMessage={
+                  <h2>
+                    Hello, {this.state.chosenCharacter.name}, thank you for identifying yourself.
+                    <br/>
+                    Now choose your lover, you must.
+                  </h2>
+                }
+                />
+                <Link to="/hotornot">
+                  <Button message="May love be with me!"/>
                 </Link>
               </>
             )}

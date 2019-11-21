@@ -1,6 +1,7 @@
 import React from "react";
 import "./HotorNot.css";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
+import { Circle } from 'rc-progress';
 
 class HotorNot extends React.Component {
   constructor(props) {
@@ -125,9 +126,11 @@ if (this.state.step <10) {
                 <h2>{this.state.position2.name}</h2>
               </div>
             </div>
-        
           </div>
         </container>
+      
+        <Circle className="progressBar" percent={this.state.step*10} strokeWidth="12" strokeColor="#49f46f" tailWidth="0" />
+        
       </div>
     );
 

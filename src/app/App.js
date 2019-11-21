@@ -11,6 +11,7 @@ import Homepage_1 from "../homepage1/homepage_1";
 import "./yodalogo.png";
 import Button from "../auxiliaries/button";
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,11 +21,13 @@ class App extends React.Component {
     };
   }
 
+
   FnGetDataAPI = async () => {
     let GetData = await getDataAPI();
     let APIcharacters = GetData;
     this.setState({ characters: APIcharacters });
   };
+
 
   componentDidMount() {
     this.FnGetDataAPI();

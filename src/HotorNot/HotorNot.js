@@ -2,6 +2,7 @@ import React from "react";
 import "./HotorNot.css";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
 import { Circle } from 'rc-progress';
+import Confetti from 'react-confetti';
 
 class HotorNot extends React.Component {
   constructor(props) {
@@ -159,6 +160,7 @@ if (this.state.step <10) {
 
                 <div className="position1">
                   <div className="charactercontainer1">
+                  <Confetti />
                     <img
                       src={this.state.userFavorite.image}
                       height="200vh"

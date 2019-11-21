@@ -6,6 +6,7 @@ import ChosenCharacter from "../characterChoice2&3&4/chosen_character_4";
 import Wedding from "../wedding7/wedding_7";
 import HotorNot from "./HotorNot.js";
 import "./yodalogo.png";
+import Button from "../auxiliaries/button";
 
 class App extends React.Component {
   constructor(props) {

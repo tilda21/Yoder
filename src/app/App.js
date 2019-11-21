@@ -7,6 +7,7 @@ import Wedding from "../wedding7/wedding_7";
 import HotorNot from "./HotorNot.js";
 import Homepage_1 from "../homepage1/homepage_1";
 import "./yodalogo.png";
+import Button from "../auxiliaries/button";
 
 class App extends React.Component {
   constructor(props) {

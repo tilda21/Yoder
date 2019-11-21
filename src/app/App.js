@@ -3,6 +3,7 @@ import './App.css';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { getDataAPI } from "./getDataAPI";
 import ChosenCharacter from '../characterChoice2&3&4/chosen_character_4';
+import Wedding from '../wedding7/wedding_7';
 
 
 
@@ -39,6 +40,9 @@ class App extends React.Component {
           <Route 
             exact path="/chosencharacter"
             render={() => <ChosenCharacter/>}/>
+          <Route 
+            exact path="/wedding"
+            render={() => <Wedding/>}/>
         </Switch>
         
       </div>

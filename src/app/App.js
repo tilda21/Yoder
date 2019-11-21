@@ -19,12 +19,16 @@ class App extends React.Component {
     let GetData = await getDataAPI();
     let character1 = GetData[0].name;
     this.setState({testAPI: character1});
-    console.log('function called')
   }
   componentDidMount() {
     this.FnGetDataAPI();
-}
-
+  }
+  
+  // Mapping by gender
+  // const gender = GetData.map(character => character.gender)
+  
+  //Mapping by user choice of gender, in this case female:
+  // console.log(gender.filter(gender => gender === 'female'))
 
   render() {
     return (

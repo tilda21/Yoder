@@ -24,11 +24,12 @@ class HotorNot extends React.Component {
     };
   }
   
-//   state.excluded characters begins with 20 as this is yoda and we don't want to show him
+//   state.excluded characters begins with 19 as this is yoda and we don't want to show him
   
 componentDidMount() {
     this.handlePosition1Click();
     this.handlePosition2Click();
+    console.log(this.props.characters)
     }
     
 generateRandom = () => {

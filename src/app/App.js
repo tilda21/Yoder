@@ -35,8 +35,6 @@ class App extends React.Component {
   // console.log(gender.filter(gender => gender === 'female'))
 
   render() {
-    console.log();
-
     return (
       <div className="App">
         <div id="logo">
@@ -57,8 +55,7 @@ class App extends React.Component {
             path="/test"
             render={() => (
               <>
-                <Homepage_1 balloonMessage="You've found a love" />
-                <Button />
+                <Homepage_1 balloonMessage="Choose a character" />
               </>
             )}
           />
@@ -72,7 +69,11 @@ class App extends React.Component {
             path="/chosencharacter"
             render={() => <ChosenCharacter />}
           />
-          <Route exact path="/hotornot" render={() => <HotorNot />} />
+          <Route
+            exact
+            path="/hotornot"
+            render={() => <HotorNot characters={this.state.characters} />}
+          />
           <Route exact path="/wedding" render={() => <Wedding />} />
         </Switch>
       </div>

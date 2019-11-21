@@ -1,6 +1,7 @@
-import React from 'react';
-import './App.css';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { Switch, Route, withRouter } from "react-router-dom";
+import HotorNot from "./HotorNot.js";
 
 function App() {
   return (
@@ -8,14 +9,13 @@ function App() {
       <header>
         <h1>YODER</h1>
         <Switch>
-          <Route exact path=""/>
-          <Route exact path=""/>
-          <Route exact path=""/>
+          <Route exact path="" />
+          <Route exact path="" />
+          <Route exact path="" />
         </Switch>
-        
       </header>
     </div>
   );
 }
 
-export default withRouter(App);;
+export default withRouter(App);

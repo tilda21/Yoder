@@ -32,3 +32,31 @@
   padding-top: 2%;
   color: #49f46f;
 }
+
+/* wedding */
+
+.container1 {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position1 img {
+  height: 30vh;
+  flex-direction: column;
+}
+
+.charactercontainer1 {
+  width: 30vh;
+  padding-top: 5%;
+}
+
+.position1 + .positio1n {
+  margin-left: 2em;
+}

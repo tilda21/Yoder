@@ -5,7 +5,7 @@ class HotorNot extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 8,
+      step: -1,
       position1: {
         image:
           "",

@@ -15,6 +15,20 @@
   flex-direction: column;
 }
 
+.charactercontainer {
+  width: 30vh;
+  padding-top: 5%;
+}
+
+.position:hover {
+  background-color: #49f46f;
+}
+
 .position + .position {
   margin-left: 2em;
+}
+
+.feedback {
+  padding-top: 2%;
+  color: #49f46f;
 }

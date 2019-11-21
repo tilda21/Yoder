@@ -4,7 +4,7 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import { getDataAPI } from "./getDataAPI";
 import ChosenCharacter from "../characterChoice2&3&4/chosen_character_4";
 import Wedding from "../wedding7/wedding_7";
-import HotorNot from "../HotorNot/HotorNot";
+import HotorNot from "../HotorNot/HotorNot.js";
 import Homepage_1 from "../homepage1/homepage_1";
 import "./yodalogo.png";
 
@@ -47,7 +47,9 @@ class App extends React.Component {
             exact
             path="/"
             render={() => (
-              <Homepage_1 balloonMessage="Welcome my galactic loveseeker! 💚" />
+              <>
+                <Homepage_1 balloonMessage="Welcome my galactic loveseeker! 💚" />
+              </>
             )}
           />
           <Route

@@ -38,7 +38,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div id="logo">
-          <Link to="/"><img src="./yoderlogo.png"></img></Link>
+          <Link to="/">
+            <img src="./yoderlogo.png"></img>
+          </Link>
         </div>
         <Switch>
           <Route
@@ -46,14 +48,36 @@ class App extends React.Component {
             path="/"
             render={() => (
               <>
-                <Homepage_1 balloonMessage={<h1>Choose a character</h1>}/>
-                <Link to="/character"><Button  message='character'/></Link>
-                <div className="temporaryButtons">
-                  <Link to="/character"><Button  message='character'/></Link>
-                  <Link to="/chosencharacter"><Button  message='chosencharacter'/></Link>
-                  <Link to="/hotornot"><Button  message='hotornot'/></Link>
-                  <Link to="/wedding"><Button  message='wedding'/></Link>
-                </div>
+                <Homepage_1
+                  balloonMessage={
+                    <h2>
+                      Welcome to the universe's #1 intergalactic dating service!
+                      🚀
+                    </h2>
+                  }
+                />
+                <Link to="/welcome1">
+                  <Button message="Next" />
+                </Link>
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/welcome1"
+            render={() => (
+              <>
+                <Homepage_1
+                  balloonMessage={
+                    <h2>
+                      Fall in love, or do not! There is no try! I'll guide you
+                      to find the love of your life. 💚
+                    </h2>
+                  }
+                />
+                <Link to="/character">
+                  <Button message="Next" />
+                </Link>
               </>
             )}
           />
@@ -63,7 +87,9 @@ class App extends React.Component {
             render={() => (
               <>
                 <Homepage_1 balloonMessage="You've found a love" />
-                <Link to="/"><Button  message='next'/></Link>
+                <Link to="/">
+                  <Button message="next" />
+                </Link>
               </>
             )}
           />

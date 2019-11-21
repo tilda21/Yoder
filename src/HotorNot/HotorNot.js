@@ -22,7 +22,7 @@ class HotorNot extends React.Component {
           image: "",
           name: ""
       },
-      excludedCharacters: [19]
+      excludedCharacters: [18]
     };
   }
   
@@ -141,10 +141,10 @@ if (this.state.step <10) {
         
             <div>
               <div className="row1">
-                <div className="position1" onClick={this.handlePosition1Click}>
+                <div className="position1">
                   <div className="charactercontainer1">
                     <img
-                      src="https://vignette.wikia.nocookie.net/starwars/images/0/02/Phasma.png"
+                      src={this.props.chosenCharacter.image}
                       height="200vh"
                     ></img>
 

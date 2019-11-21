@@ -1,14 +1,14 @@
-body{
-  background-image: url('https://res.cloudinary.com/darjcijgb/image/upload/v1574325375/space_ptic8l.jpg');
+body {
+  background-image: url("https://res.cloudinary.com/darjcijgb/image/upload/v1574325375/space_ptic8l.jpg");
 }
 
 .App {
   text-align: center;
-  font-family: 'Ropa Sans', sans-serif;
+  font-family: "Ropa Sans", sans-serif;
   color: white;
 }
 
-#logo{
+#logo {
   font-size: 90px;
   margin-top: 0px;
   font-weight: bold;
@@ -24,11 +24,12 @@ button.buttonstyle {
   box-shadow: 0 0 10px #49f46f, 0 0 10px #49f46f, 0 0 10px #49f46f;
   border-radius: 5px;
   text-transform: uppercase;
+  font-family: "Ropa Sans", sans-serif;
 }
 
 button:hover {
- transform: scale(1.1);
- transition: all 100ms ease-in;
+  transform: scale(1.1);
+  transition: all 100ms ease-in;
 }
 
 div.centerdiv {
@@ -39,4 +40,3 @@ div.centerdiv {
 .temporaryButtons {
   text-align: center;
 }
-

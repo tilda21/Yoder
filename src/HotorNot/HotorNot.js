@@ -30,6 +30,7 @@ componentDidMount() {
     this.handlePosition1Click();
     this.handlePosition2Click();
     console.log(this.props.characters)
+      console.log(this.state.confettiActive);
     }
     
 generateRandom = () => {
@@ -95,8 +96,12 @@ handlePosition1Click = () => {
         });
 
     }
+    
 
   render() {
+
+
+
 if (this.state.step <10) {
     return (
       <div>
@@ -104,36 +109,69 @@ if (this.state.step <10) {
           <h1>Who's hottest? 🔥</h1>
           <div className="row">
             <div className="position" onClick={this.handlePosition1Click}>
-                <div className="charactercontainer">
-              <img src={this.state.position1.image}></img>
-                            
-              <h2>{this.state.position1.name}</h2>
-                        </div>
+              <div className="charactercontainer">
+                <img src={this.state.position1.image}></img>
+
+                <h2>{this.state.position1.name}</h2>
+              </div>
             </div>
             <div className="position">
-                <div className="charactercontainer">
-              <img src={this.state.position2.image} onClick={this.handlePosition2Click}></img>
-              <h2>{this.state.position2.name}</h2>
-                       </div>
+              <div className="charactercontainer">
+                <img
+                  src={this.state.position2.image}
+                  onClick={this.handlePosition2Click}
+                ></img>
+                <h2>{this.state.position2.name}</h2>
+              </div>
             </div>
-                    
+        
           </div>
-                
         </container>
       </div>
-    )
+    );
 
     } else {
         return (
           <container>
-         
-                <img src={this.state.userFavorite.image} height="200vh"></img>
-                <h2> Congratulations 🎉</h2>
-                <p>You will be married to {this.state.userFavorite.name} for all of eternity</p>
-                💚
-            </container>
             
-)
+        
+            <div>
+              <div className="row1">
+                <div className="position1" onClick={this.handlePosition1Click}>
+                  <div className="charactercontainer1">
+                    <img
+                      src="https://vignette.wikia.nocookie.net/starwars/images/0/02/Phasma.png"
+                      height="200vh"
+                    ></img>
+
+                    <h2>You</h2>
+                  </div>
+                </div>
+                <div className="position1">
+                  <div className="charactercontainer1">
+                    <img src="./yodapriest.png" height="200vh"></img>
+                  </div>
+                </div>
+
+                <div className="position1">
+                  <div className="charactercontainer1">
+                    <img
+                      src={this.state.userFavorite.image}
+                      height="200vh"
+                    ></img>
+                    <h2>{this.state.userFavorite.name}</h2>
+                  </div>
+                </div>
+              </div>
+              <h2> Congratulations 🎉</h2>
+              <h2>
+                Yoda has decreed your marriage to {this.state.userFavorite.name}{" "}
+                for all of eternity.
+              </h2>
+              💚
+            </div>
+          </container>
+        );
         }}}
 
 const dataSet = [

@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>YODER</h1>
+        <div id="logo">YODER</div>
         <h2>{this.state.test} you are!</h2>
 
         <Switch>

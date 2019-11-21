@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import "./App.css";
-import { Switch, Route, withRouter } from "react-router-dom";
+import { Switch, Route, withRouter, Link } from "react-router-dom";
 import { getDataAPI } from "./getDataAPI";
 import FilterByGender from "../characterChoice2&3&4/filter_2";
 import ChosenCharacter from "../characterChoice2&3&4/chosen_character_4";
@@ -39,7 +39,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div id="logo">
-          <img src="./yoderlogo.png"></img>
+          <Link to="/"><img src="./yoderlogo.png"></img></Link>
         </div>
         <Switch>
           <Route
@@ -48,7 +48,13 @@ class App extends React.Component {
             render={() => (
               <>
                 <Homepage_1 balloonMessage={<h1>Choose a character</h1>}/>
-                <Button message='start'/>
+                <Link to="/character"><Button  message='character'/></Link>
+                <div className="temporaryButtons">
+                  <Link to="/character"><Button  message='character'/></Link>
+                  <Link to="/chosencharacter"><Button  message='chosencharacter'/></Link>
+                  <Link to="/hotornot"><Button  message='hotornot'/></Link>
+                  <Link to="/wedding"><Button  message='wedding'/></Link>
+                </div>
               </>
             )}
           />
@@ -58,7 +64,7 @@ class App extends React.Component {
             render={() => (
               <>
                 <Homepage_1 balloonMessage="You've found a love" />
-                <Button  message='next'/>
+                <Link to="/"><Button  message='next'/></Link>
               </>
             )}
           />

@@ -1,6 +1,7 @@
 import React from "react";
 import Balloon from "./Balloon.js";
 
+
 class Homepage_1 extends React.Component {
   render() {
     const { balloonMessage } = this.props;

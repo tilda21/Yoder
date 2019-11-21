@@ -11,7 +11,7 @@ class Balloon extends React.Component {
 
     return (
       <div class="speech-bubble">
-        <h1>{balloonMessage}</h1>
+        {balloonMessage}
       </div>
     );
   }

@@ -8,8 +8,8 @@ body {
   width: 20em;
   height: 8em;
   border-radius: 0.25em;
-  transform: rotate(-4deg) rotateY(15deg);
-  background: #49f46f;
+  /* transform: rotate(-4deg) rotateY(15deg); */
+  background: #f4fbfe;
   font: 2em/4;
   color: black;
   font-family: "Ropa Sans", sans-serif;
@@ -29,7 +29,7 @@ body {
   left: 0;
   border-radius: inherit;
   transform: rotate(2deg) translate(0.35em, -0.15em) scale(1.02);
-  background: #f4fbfe;
+  background: #49f46f;
 }
 .speech-bubble:before {
   border: solid 0 transparent;

@@ -1,5 +1,8 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from 'react';
 import './filter_2.css';
+import '../homepage1/homepage_1'
+import Homepage_1 from '../homepage1/homepage_1';
 
 
 class FilterByGender extends React.Component {
@@ -28,11 +31,11 @@ class FilterByGender extends React.Component {
 
         
     render(){
-        console.log(this.state.gender, this.state.filteredCharacters)
         return (
          <>
-            <div>Calling Yoda component here</div>
+         <Homepage_1 balloonMessage={
             <div>
+                <h2>First, choose your character:</h2>
                  <button 
                     onClick={this.handleGender} 
                     value="female" 
@@ -52,6 +55,7 @@ class FilterByGender extends React.Component {
                         All 
                 </button>
             </div>
+         }/>
             <div id="filteredCharactersContainer">
                     {
                         this.state.filteredCharacters.map(character => {

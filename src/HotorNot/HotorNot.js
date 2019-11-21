@@ -128,7 +128,7 @@ if (this.state.step <10) {
          
                 <img src={this.state.userFavorite.image} height="200vh"></img>
                 <h2> Congratulations 🎉</h2>
-                <p>You will be married to {this.state.userFavorite.name} for all eternity</p>
+                <p>You will be married to {this.state.userFavorite.name} for all of eternity</p>
                 💚
             </container>
             

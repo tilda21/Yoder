@@ -121,14 +121,21 @@ if (this.state.step <10) {
           <h1>Who's hottest? 🔥</h1>
           <div className="row">
             <div className="position" onClick={this.handlePosition1Click}>
+                <div className="charactercontainer">
               <img src={this.state.position1.image}></img>
+                            
               <h2>{this.state.position1.name}</h2>
+                        </div>
             </div>
             <div className="position">
+                <div className="charactercontainer">
               <img src={this.state.position2.image} onClick={this.handlePosition2Click}></img>
               <h2>{this.state.position2.name}</h2>
+                       </div>
             </div>
+                    
           </div>
+                
         </container>
       </div>
     )

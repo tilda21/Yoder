@@ -12,5 +12,5 @@ button.buttonstyle {
 
 div.centerdiv {
     text-align: center;
-    margin: auto;
+    margin: 20px auto 0px auto;
 }

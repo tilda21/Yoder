@@ -48,6 +48,7 @@ class App extends React.Component {
             render={() => (
               <>
                 <Homepage_1 balloonMessage={<h1>Choose a character</h1>}/>
+                <Button message='start'/>
               </>
             )}
           />
@@ -56,7 +57,8 @@ class App extends React.Component {
             path="/test"
             render={() => (
               <>
-                <Homepage_1 balloonMessage="Choose a character" />
+                <Homepage_1 balloonMessage="You've found a love" />
+                <Button  message='next'/>
               </>
             )}
           />

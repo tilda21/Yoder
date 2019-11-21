@@ -30,9 +30,9 @@ class App extends React.Component {
     this.FnGetDataAPI();
   }
 
-  handleChosenCharacter = (char) => {
-    this.setState({ chosenCharacter: char })
-  }
+  handleChosenCharacter = char => {
+    this.setState({ chosenCharacter: char });
+  };
 
   render() {
     return (
@@ -96,23 +96,30 @@ class App extends React.Component {
           <Route
             exact
             path="/character"
-            render={() => 
-            <FilterByGender 
-              characters={this.state.characters}
-              balloonMessage={this.props.balloonMessage}
-              handleChosenCharacter={this.handleChosenCharacter} />}
+            render={() => (
+              <FilterByGender
+                characters={this.state.characters}
+                balloonMessage={this.props.balloonMessage}
+                handleChosenCharacter={this.handleChosenCharacter}
+              />
+            )}
           />
           <Route
             exact
             path="/chosencharacter"
-            render={() => 
-              <ChosenCharacter
-              chosenCharacter={this.state.chosenCharacter} />}
+            render={() => (
+              <ChosenCharacter chosenCharacter={this.state.chosenCharacter} />
+            )}
           />
           <Route
             exact
             path="/hotornot"
-            render={() => <HotorNot characters={this.state.characters} />}
+            render={() => (
+              <HotorNot
+                characters={this.state.characters}
+                chosenCharacter={this.state.chosenCharacter}
+              />
+            )}
           />
           <Route exact path="/wedding" render={() => <Wedding />} />
         </Switch>

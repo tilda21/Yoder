@@ -1,3 +1,8 @@
+h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .container {
   max-width: 500px;
   margin: 0 auto;
@@ -24,8 +29,8 @@
   background-color: #49f46f;
 }
 
-.position:active{
-    background-color: white;
+.position:active {
+  background-color: white;
 }
 
 .position + .position {
@@ -38,7 +43,7 @@
 }
 
 .progressBar {
- max-width: 6vh;
+  max-width: 6vh;
   padding-top: 2%;
   margin: 0 auto;
 }

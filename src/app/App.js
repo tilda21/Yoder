@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import "./App.css";
 import { Switch, Route, withRouter } from "react-router-dom";
@@ -35,8 +36,6 @@ class App extends React.Component {
   // console.log(gender.filter(gender => gender === 'female'))
 
   render() {
-    console.log();
-
     return (
       <div className="App">
         <div id="logo">
@@ -48,7 +47,7 @@ class App extends React.Component {
             path="/"
             render={() => (
               <>
-                <Homepage_1 balloonMessage="Choose a character" />
+                <Homepage_1 balloonMessage={<h1>Choose a character</h1>}/>
                 <Button message='start'/>
               </>
             )}
@@ -66,14 +65,21 @@ class App extends React.Component {
           <Route
             exact
             path="/character"
-            render={() => <FilterByGender characters={this.state.characters} />}
+            render={() => 
+            <FilterByGender 
+              characters={this.state.characters}
+              balloonMessage={this.props.balloonMessage} />}
           />
           <Route
             exact
             path="/chosencharacter"
             render={() => <ChosenCharacter />}
           />
-          <Route exact path="/hotornot" render={() => <HotorNot />} />
+          <Route
+            exact
+            path="/hotornot"
+            render={() => <HotorNot characters={this.state.characters} />}
+          />
           <Route exact path="/wedding" render={() => <Wedding />} />
         </Switch>
       </div>

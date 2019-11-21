@@ -5,24 +5,31 @@
     align-items: center;
     max-width: 70vw;
     margin: auto;
+    margin-top: 20px;
 }
 
-#filteredCharactersChild {
-    margin: 10px;
+/* #filteredCharactersChild {
     
-}
+} */
 
 #filteredCharactersChild:hover {
     background-color: #49f46f;
-    padding: 1% 3%;
+    
 }
 
 #filteredCharactersChild img{
     height: 30vh;
-    max-width:100%;    
+    max-width:100%;
+    margin: 10px;
+    padding: 5px 10px;
     
 }
 
 .genderButton{
-    
+    box-shadow: 0 0 3px #49f46f, 0 0 3px #49f46f, 0 0 3px #49f46f;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 10px;
+    font-weight: bold;
 }

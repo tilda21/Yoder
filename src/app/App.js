@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import "./App.css";
 import { Switch, Route, withRouter } from "react-router-dom";
@@ -48,7 +49,7 @@ class App extends React.Component {
             path="/"
             render={() => (
               <>
-                <Homepage_1 balloonMessage="Choose a character" />
+                <Homepage_1 balloonMessage={<h1>Choose a character</h1>}/>
               </>
             )}
           />
@@ -65,7 +66,10 @@ class App extends React.Component {
           <Route
             exact
             path="/character"
-            render={() => <FilterByGender characters={this.state.characters} />}
+            render={() => 
+            <FilterByGender 
+              characters={this.state.characters}
+              balloonMessage={this.props.balloonMessage} />}
           />
           <Route
             exact

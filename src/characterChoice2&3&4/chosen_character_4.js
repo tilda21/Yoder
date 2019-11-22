@@ -19,9 +19,9 @@ class ChosenCharacter extends Component {
                 <div id="chosenDetails">
                     <h1>{this.props.chosenCharacter.name}</h1>
                     <ul>
+                        <li><span>Species: </span> {this.capitalize(this.props.chosenCharacter.species)}</li>
                         <li><span>Height: </span> {this.props.chosenCharacter.height}m</li>
                         <li><span>Homeworld: </span> {this.capitalize(this.props.chosenCharacter.homeworld)}</li>
-                        <li><span>Species: </span> {this.capitalize(this.props.chosenCharacter.species)}</li>
                     </ul>
                 </div>
             </div>

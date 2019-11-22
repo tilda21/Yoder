@@ -95,10 +95,10 @@ h1{
 
 @media (max-width: 550px){
     .frame img {
-        max-width: 50vw;
+        max-width: 60vw;
     }
     #container{
-        max-width: 70vw;
+        max-width: 80vw;
     }
     
     #chosenDetails{
@@ -106,7 +106,7 @@ h1{
     }
 
     h1{
-        font-size: 30px;
+        font-size: 35px;
     }
 
 

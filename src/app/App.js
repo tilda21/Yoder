@@ -8,6 +8,7 @@ import ChosenCharacter from "../characterChoice2&3&4/chosen_character_4";
 import Wedding from "../wedding7/wedding_7";
 import HotorNot from "../HotorNot/HotorNot.js";
 import Homepage_1 from "../homepage1/homepage_1";
+import Credits from "../credits/credits";
 import "./yodalogo.png";
 import Button from "../auxiliaries/button";
 
@@ -132,6 +133,7 @@ class App extends React.Component {
             )}
           />
           <Route exact path="/wedding" render={() => <Wedding />} />
+          <Route exact path="/credits" render={() => <Credits />} />
         </Switch>
       </div>
     );

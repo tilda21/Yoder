@@ -111,3 +111,9 @@ h1{
 
 
 }
+
+span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+

@@ -9,3 +9,12 @@ div.crawler div {
 div.crawler section {
     color: #49f46f!important;
 }
+
+#Margin {
+    margin: 0px auto 0px 30px;
+    text-align: left;
+}
+
+#Style {
+    font-size: 15px;
+}

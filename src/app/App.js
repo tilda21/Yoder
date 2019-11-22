@@ -11,6 +11,7 @@ import Homepage_1 from "../homepage1/homepage_1";
 import Credits from "../credits/credits";
 import "./yodalogo.png";
 import Button from "../auxiliaries/button";
+import soundfile from "./StarWarsThemeJohnWilliams.mp3"
 
 
 class App extends React.Component {
@@ -18,7 +19,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      chosenCharacter: {}
+      chosenCharacter: {},
+      url: soundfile,
     };
   }
 
@@ -133,7 +135,7 @@ class App extends React.Component {
             )}
           />
           <Route exact path="/wedding" render={() => <Wedding />} />
-          <Route exact path="/credits" render={() => <Credits />} />
+          <Route exact path="/credits" render={() => <Credits url={this.state.url} />} />
         </Switch>
       </div>
     );

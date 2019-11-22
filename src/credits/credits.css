@@ -1,0 +1,11 @@
+div.crawler {
+    background: none!important;
+}
+div.crawler div {
+    min-height: 0vh!important;
+    background-image: none!important;
+}
+
+div.crawler section {
+    color: #49f46f!important;
+}

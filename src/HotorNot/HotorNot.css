@@ -19,7 +19,7 @@ h1 {
 .position img {
   height: 30vh;
   flex-direction: column;
-  max-width: 50vw;
+  max-width: 180px;
   border-radius: 10px;
 }
 
@@ -42,7 +42,6 @@ h1 {
 
 .feedback {
   padding-top: 2%;
-  color: #49f46f;
 }
 
 .progressBar {
@@ -77,6 +76,14 @@ h1 {
 
   .progressBar {
     padding-top: 5vh;
+  }
+
+  .position:hover {
+    background-color: none;
+  }
+
+  .position:active {
+    background-color: none;
   }
 }
 

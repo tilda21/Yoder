@@ -109,7 +109,7 @@ if (this.state.step <10) {
     return (
       <div>
         <container>
-          <h1>Who's hottest? 🔥</h1>
+          <h1>Who is the hottest? 🔥</h1>
           <div className="row">
             <div className="position" onClick={this.handlePosition1Click}>
               <div className="charactercontainer">

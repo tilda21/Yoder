@@ -144,6 +144,10 @@ h1 {
   .yodapriest img {
     max-height: 10vh;
   }
+
+  .congratsmargin {
+    margin: 0px 10px;
+  }
 }
 
 #buttonDivWedding{

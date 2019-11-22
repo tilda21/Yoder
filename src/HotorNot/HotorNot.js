@@ -175,7 +175,7 @@ if (this.state.step <10) {
                 </div>
               </div>
               <h2> Congratulations 🎉</h2>
-              <h2>
+              <h2 className="congratsmargin">
                 Yoda has decreed your marriage to {this.state.userFavorite.name}{" "}
                 for all of eternity.
               </h2>

@@ -134,7 +134,6 @@ class App extends React.Component {
               />
             )}
           />
-          <Route exact path="/wedding" render={() => <Wedding />} />
           <Route exact path="/credits" render={() => <Credits url={this.state.url} />} />
         </Switch>
       </div>

@@ -13,7 +13,6 @@ body {
   font: 2em/4;
   color: black;
   font-family: "Ropa Sans", sans-serif;
-
   text-align: center;
 }
 
@@ -45,4 +44,18 @@ body {
 
 speech-bubble .img {
   padding-top: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .speech-bubble {
+    width: 17em;
+    height: 7em;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h1 {
+    padding-bottom:0px!important;
+  }
+  
 }

@@ -93,7 +93,7 @@ class App extends React.Component {
                   <h2>
                     Hello, {this.state.chosenCharacter.name}, thank you for identifying yourself.
                     <br/>
-                    Now choose your lover, you must.
+                    Now your lover, you must choose.
                   </h2>
                 }
                 />

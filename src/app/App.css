@@ -32,10 +32,15 @@ button:hover {
 }
 
 div.centerdiv {
-  margin: 40px auto 0px auto;
+  margin: 30px auto 0px auto;
 }
 
 .temporaryButtons {
   text-align: center;
 }
 
+@media only screen and (max-width: 400px) {
+  .charactercontainer {
+    width: 25vh!important;
+  }
+}

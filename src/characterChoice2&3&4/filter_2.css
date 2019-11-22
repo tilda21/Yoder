@@ -1,11 +1,11 @@
-#filteredCharactersContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 70vw;
-    margin: auto;
-    margin-top: 20px;
+#filteredCharactersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 70vw;
+  margin: auto;
+  margin-top: 20px;
 }
 
 /* #filteredCharactersChild {
@@ -13,34 +13,38 @@
 } */
 
 #filteredCharactersChild:hover {
-    background-color: #49f46f;
-    
+  background-color: #49f46f;
 }
 
-#filteredCharactersChild img{
-    height: 30vh;
-    max-width: 100%;
-    margin: 10px;
-    padding: 5px 10px;
+#filteredCharactersChild:active {
+  background-color: white;
+  /* clicked character */
 }
 
-#filteredCharactersChild h2{
-    margin-top: 0px;
-    padding-bottom: 10px;
+#filteredCharactersChild img {
+  height: 30vh;
+  max-width: 100%;
+  margin: 10px;
+  padding: 5px 10px;
 }
 
-.genderButton{
-    box-shadow: 0 0 3px #49f46f, 0 0 3px #49f46f, 0 0 3px #49f46f;
-    border-radius: 5px;
-    font-size: 20px;
-    text-transform: uppercase;
-    margin: 10px;
-    font-weight: bold;
-    font-family: 'Ropa Sans', sans-serif;
+#filteredCharactersChild h2 {
+  margin-top: 0px;
+  padding-bottom: 10px;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
+.genderButton {
+  box-shadow: 0 0 3px #49f46f, 0 0 3px #49f46f, 0 0 3px #49f46f;
+  border-radius: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 10px;
+  font-weight: bold;
+  font-family: "Ropa Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }

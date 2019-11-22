@@ -30,12 +30,13 @@ class HotorNot extends React.Component {
 //   state.excluded characters begins with 19 as this is yoda and we don't want to show him
   
 componentDidMount() {
+
+    console.log(this.state.excludedCharacters)
+
     this.handlePosition1Click();
     this.handlePosition2Click();
-    console.log(this.props.characters)
-      console.log(this.state.confettiActive);
-    }
-    
+
+}
 generateRandom = () => {
 
     // randomly generate number
@@ -45,9 +46,13 @@ generateRandom = () => {
     const excludedNumbers = [...this.state.excludedCharacters];
     excludedNumbers.push(num);
 
+    excludedNumbers.push(this.props.chosenCharacter.id-1);
+
     this.setState({
         excludedCharacters: excludedNumbers
     });
+
+    console.log(this.state.excludedCharacters)
 
     // return generated number unless the number is in the exclusion list, then we generate a new number
     return (this.state.excludedCharacters.includes(num)) ? this.generateRandom() : num;
@@ -130,7 +135,7 @@ if (this.state.step <10) {
           </div>
         </container>
       
-        <Circle className="progressBar" percent={this.state.step*10} strokeWidth="12" strokeColor="#49f46f" tailWidth="0" />
+        <Circle className="progressBar" percent={this.state.step*10} strokeWidth="12" strokeColor="#49f46f"/>
         
       </div>
     );

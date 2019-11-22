@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://res.cloudinary.com/darjcijgb/image/upload/v1574325375/space_ptic8l.jpg");
+  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
 }
 
 .App {
@@ -40,3 +40,4 @@ div.centerdiv {
 .temporaryButtons {
   text-align: center;
 }
+

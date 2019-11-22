@@ -153,7 +153,7 @@ if (this.state.step <10) {
                   </div>
                 </div>
                 <div className="position1">
-                  <div className="charactercontainer1">
+                  <div className="charactercontainer1 yodapriest">
                     <img src="./yodapriest.png" height="200vh"></img>
                   </div>
                 </div>

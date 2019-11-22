@@ -50,10 +50,39 @@ h1 {
   margin: 0 auto;
 }
 
+@media (max-width: 550px) {
+  h1 {
+    padding-bottom: 8vh;
+  }
+
+  .position img {
+    height: 22vh;
+
+    max-width: 40vw;
+  }
+
+  .charactercontainer {
+    width: 20vh;
+    padding-top: 30%;
+  }
+
+  .position + .position {
+    margin-left: 0em;
+  }
+
+  .feedback {
+    padding-top: 2%;
+  }
+
+  .progressBar {
+    padding-top: 5vh;
+  }
+}
+
 /* wedding */
 
 .container1 {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -64,18 +93,47 @@ h1 {
   align-items: center;
 }
 
+.yodapriest img {
+  max-height: 15vh;
+}
+
 .position1 img {
-  height: 30vh;
+  height: 20vh;
   flex-direction: column;
-  max-width: 50vw;
+  max-width: 30vw;
   border-radius: 10px;
 }
 
 .charactercontainer1 {
-  width: 30vh;
+  width: 15vh;
   padding-top: 5%;
 }
 
-.position1 + .positio1n {
+.position1 + .position1 {
   margin-left: 2em;
+}
+
+@media (max-width: 550px) {
+  h1 {
+    padding-bottom: 8vh;
+  }
+
+  .position1 img {
+    height: 20vh;
+
+    max-width: 40vw;
+  }
+
+  .charactercontainer1 {
+    width: 20vh;
+    padding-top: 30%;
+  }
+
+  .position1 + .position1 {
+    margin-left: -3em;
+  }
+
+  .yodapriest img {
+    max-height: 10vh;
+  }
 }

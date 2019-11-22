@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from '../auxiliaries/button';
 import './chosen_character_4.css'
 import { Link } from 'react-router-dom';
 

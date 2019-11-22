@@ -18,3 +18,14 @@ div.crawler section {
 #Style {
     font-size: 15px;
 }
+
+@media only screen and (max-width: 400px) {
+    #Margin {
+        margin: 0px auto 20px auto;
+        text-align: center;
+    }
+    
+    #Style {
+        font-size: 10px;
+    }
+}

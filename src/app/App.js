@@ -63,7 +63,7 @@ class App extends React.Component {
                   }
                 />
                 <Link to="/welcome1">
-                  <Button message="Next" />
+                  <Button message="Start" />
                 </Link>
               </>
             )}

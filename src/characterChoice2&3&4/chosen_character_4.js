@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 
 class ChosenCharacter extends Component {
 
+    capitalize = (s) => {
+        return s.charAt(0).toUpperCase() + s.slice(1)
+      }
+
     render(){
         return (
         <>
@@ -15,9 +19,9 @@ class ChosenCharacter extends Component {
                 <div id="chosenDetails">
                     <h1>{this.props.chosenCharacter.name}</h1>
                     <ul>
-                        <li>Height: {this.props.chosenCharacter.height}m</li>
-                        <li>Homeworld: {this.props.chosenCharacter.homeworld}</li>
-                        <li>Species: {this.props.chosenCharacter.species}</li>
+                        <li><span>Height: </span> {this.props.chosenCharacter.height}m</li>
+                        <li><span>Homeworld: </span> {this.capitalize(this.props.chosenCharacter.homeworld)}</li>
+                        <li><span>Species: </span> {this.capitalize(this.props.chosenCharacter.species)}</li>
                     </ul>
                 </div>
             </div>

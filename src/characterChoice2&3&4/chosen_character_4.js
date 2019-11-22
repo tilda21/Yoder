@@ -9,6 +9,8 @@ class ChosenCharacter extends Component {
       }
 
     render(){
+        console.log(this.props.chosenCharacter.homeworld, this.props.chosenCharacter.height, this.props.chosenCharacter.species)
+
         return (
         <>
             <h1>Your profile:</h1>
@@ -21,7 +23,14 @@ class ChosenCharacter extends Component {
                     <ul>
                         <li><span>Species: </span> {this.capitalize(this.props.chosenCharacter.species)}</li>
                         <li><span>Height: </span> {this.props.chosenCharacter.height}m</li>
-                        <li><span>Homeworld: </span> {this.capitalize(this.props.chosenCharacter.homeworld)}</li>
+
+                        <li><span>Homeworld: </span> {
+                            this.props.chosenCharacter.homeworld ? 
+                            this.capitalize(this.props.chosenCharacter.homeworld)
+                            :
+                            'No homeworld'
+                            }</li>
+
                     </ul>
                 </div>
             </div>

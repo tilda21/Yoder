@@ -137,8 +137,8 @@ if (this.state.step <10) {
 
     } else {
         return (
-          <container>
-            
+            <><Confetti />
+            <container>
         
             <div>
               <div className="row1">
@@ -160,7 +160,7 @@ if (this.state.step <10) {
 
                 <div className="position1">
                   <div className="charactercontainer1">
-                  <Confetti />
+                  
                     <img
                       src={this.state.userFavorite.image}
                       height="200vh"
@@ -180,6 +180,7 @@ if (this.state.step <10) {
         </div>
         </div>
           </container>
+          </>
         );
         }}}
 

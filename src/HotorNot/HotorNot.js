@@ -175,8 +175,9 @@ if (this.state.step <10) {
                 for all of eternity.
               </h2>
               💚
-              <div className="centerdiv">
-             <Link to="/character"><button className="buttonstyle">Play Again!</button></Link>
+              <div id="buttonDivWedding">
+             <Link to="/credits"><button className="CreditsPlayAgainButton">Watch Credits</button></Link>
+             <Link to="/character"><button className="CreditsPlayAgainButton">Play Again!</button></Link>
         </div>
         </div>
           </container>

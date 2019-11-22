@@ -138,3 +138,31 @@ h1 {
     max-height: 10vh;
   }
 }
+
+#buttonDivWedding{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.CreditsPlayAgainButton{
+  margin: 15px 20px;
+  border: none;
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 8px 30px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px #49f46f, 0 0 10px #49f46f, 0 0 10px #49f46f;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: "Ropa Sans", sans-serif;
+}
+
+.CreditsPlayAgainButton:hover{
+  transform: scale(1.1);
+  transition: all 100ms ease-in;
+}

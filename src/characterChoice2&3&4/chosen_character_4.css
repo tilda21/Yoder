@@ -68,7 +68,52 @@ h1{
     font-size: 25px; 
 }
 
+@media (max-width: 1050px){
+    h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 850px){
+    #container{
+        max-width: 70vw;
+    }
+    .frame img {
+        max-width: 28vw;
+    }
+    
+    #chosenDetails{
+        max-width: 40vw;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 550px){
+    .frame img {
+        max-width: 50vw;
+    }
+    #container{
+        max-width: 70vw;
+    }
+    
+    #chosenDetails{
+        max-width: 50vw;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+
+
+}
+
 span{
     text-transform: uppercase;
     font-weight: bold;
 }
+

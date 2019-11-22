@@ -8,6 +8,10 @@ body {
   color: white;
 }
 
+#logo {
+  margin-right: 30px;
+}
+
 
 button.buttonstyle {
   border: none;

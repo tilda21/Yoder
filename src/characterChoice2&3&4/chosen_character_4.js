@@ -11,6 +11,7 @@ class ChosenCharacter extends Component {
     render(){
         return (
         <>
+            <h1>Your profile:</h1>
             <div id="container">
                 <div className="frame">
                     <img src={this.props.chosenCharacter.image} alt="chosen character"/>

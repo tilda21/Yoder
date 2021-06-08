@@ -8,7 +8,6 @@ body {
   width: 20em;
   height: 8em;
   border-radius: 0.25em;
-  /* transform: rotate(-4deg) rotateY(15deg); */
   background: #f4fbfe;
   font: 2em/4;
   color: black;
@@ -16,21 +15,12 @@ body {
   text-align: center;
 }
 
-.speech-bubble:before,
-.speech-bubble:after {
+.speech-bubble:before, .speech-bubble:after {
   position: absolute;
   z-index: -1;
   content: "";
 }
-.speech-bubble:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: inherit;
-  transform: rotate(2deg) translate(0.35em, -0.15em) scale(1.02);
-  background: #49f46f;
-}
+
 .speech-bubble:before {
   border: solid 0 transparent;
   border-right: solid 3.5em #f4fbfe;
@@ -42,6 +32,16 @@ body {
   transform: rotate(45deg) skewX(75deg);
 }
 
+.speech-bubble:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  transform: rotate(2deg) translate(0.35em, -0.15em) scale(1.02);
+  background: #49f46f;
+}
+
 speech-bubble .img {
   padding-top: 10px;
 }
@@ -51,11 +51,12 @@ speech-bubble .img {
     width: 17em;
     height: 7em;
   }
+
   h2 {
     font-size: 22px;
   }
-  h1 {
-    padding-bottom:0px!important;
-  }
   
+  h1 {
+    padding-bottom: 0px !important;
+  }
 }

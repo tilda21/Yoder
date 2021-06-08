@@ -2,8 +2,8 @@ import React from 'react';
 import './wedding_7.css';
 
 const Wedding = () => {
-        return (
-        <>
+    return (
+        <React.Fragment>
             <h1>It's wedding time!</h1>
             <div>
                 <div>
@@ -16,9 +16,8 @@ const Wedding = () => {
                     Your chosen lover
                 </div>
             </div>
-        </>
+        </React.Fragment>
         )
-
     }
 
 

@@ -5,14 +5,12 @@ import { Switch, Route, withRouter, Link } from "react-router-dom";
 import { getDataAPI } from "./getDataAPI";
 import FilterByGender from "../characterChoice2&3&4/filter_2";
 import ChosenCharacter from "../characterChoice2&3&4/chosen_character_4";
-import Wedding from "../wedding7/wedding_7";
 import HotorNot from "../HotorNot/HotorNot.js";
 import Homepage_1 from "../homepage1/homepage_1";
 import Credits from "../credits/credits";
 import "./yodalogo.png";
 import Button from "../auxiliaries/button";
 import soundfile from "./StarWarsThemeJohnWilliams.mp3"
-
 
 class App extends React.Component {
   constructor(props) {
@@ -25,27 +23,24 @@ class App extends React.Component {
   }
 
 
-  FnGetDataAPI = async () => {
-    let GetData = await getDataAPI();
-    let APIcharacters = GetData;
+  fetchData = async () => {
+    let APIcharacters = await getDataAPI();
     this.setState({ characters: APIcharacters });
   };
 
 
   componentDidMount() {
-    this.FnGetDataAPI();
+    this.fetchData();
   }
 
-  handleChosenCharacter = char => {
-    this.setState({ chosenCharacter: char });
-  };
+  handleChosenCharacter = (char) => this.setState({ chosenCharacter: char });
 
   render() {
     return (
       <div className="App">
         <div id="logo">
           <Link to="/">
-            <img src="./yoderlogo.png"></img>
+            <img src="./yoderlogo.png" alt="yoda" />
           </Link>
         </div>
         <Switch>

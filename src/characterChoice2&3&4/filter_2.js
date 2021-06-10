@@ -4,7 +4,7 @@ import './filter_2.css';
 import '../homepage1/homepage_1'
 import Homepage_1 from '../homepage1/homepage_1';
 import { Link } from 'react-router-dom';
-import {Element, scroller } from 'react-scroll'
+import { Element, scroller } from 'react-scroll'
 
 
 class FilterByGender extends React.Component {

@@ -2,11 +2,7 @@ import React from "react";
 import "./Balloon.css";
 
 class Balloon extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+  render() {  
     const { balloonMessage } = this.props;
 
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./HotorNot.css";
-import { Switch, Route, withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Circle } from 'rc-progress';
 import Confetti from 'react-confetti';
 
@@ -30,15 +30,11 @@ class HotorNot extends React.Component {
 //   state.excluded characters begins with 19 as this is yoda and we don't want to show him
   
 componentDidMount() {
-
-    console.log(this.state.excludedCharacters)
-
     this.handlePosition1Click();
     this.handlePosition2Click();
-
 }
+    
 generateRandom = () => {
-
     // randomly generate number
     var num = Math.floor(Math.random() * 87);
 
@@ -52,143 +48,120 @@ generateRandom = () => {
         excludedCharacters: excludedNumbers
     });
 
-    console.log(this.state.excludedCharacters)
-
     // return generated number unless the number is in the exclusion list, then we generate a new number
     return (this.state.excludedCharacters.includes(num)) ? this.generateRandom() : num;
-
 }
 
 
 handlePosition1Click = () => {
-
     // define clicked character as user favorite
-
-    this.setState({
-        userFavorite: this.state.position1})
+    this.setState({ userFavorite: this.state.position1 });
 
     // reset the other position
-
     const position2Object = dataSet[this.generateRandom()];
     const position2 = {
         image: position2Object.image,
         name: position2Object.name
-    }
-    this.setState({
-        position2: position2,
-        step: this.state.step + 1
+    };
 
-    });
-    
+    this.setState({ position2: position2, step: this.state.step + 1 });
 }
 
-    handlePosition2Click = () => {
+handlePosition2Click = () => {
+    // define clicked character as user favorite
+    this.setState({ userFavorite: this.state.position2 });
 
-        // define clicked character as user favorite
+    // reset the other position and increment step
+    const position1Object = dataSet[this.generateRandom()];
+    const position1 = {
+        image: position1Object.image,
+        name: position1Object.name
+    };
 
-        this.setState({
-            userFavorite: this.state.position2
-        })
-
-        // reset the other position and increment step
-
-        const position1Object = dataSet[this.generateRandom()];
-        const position1 = {
-            image: position1Object.image,
-            name: position1Object.name
-        }
-        this.setState({
-            position1: position1,
-            step: this.state.step + 1
-
-        });
-
-    }
+    this.setState({ position1: position1, step: this.state.step + 1 });
+}
     
 
-  render() {
-
-
-
-if (this.state.step <10) {
-    return (
-      <div>
-        <container>
-          <h1>Who is the hottest? 🔥</h1>
-          <div className="row">
-            <div className="position" onClick={this.handlePosition1Click}>
-              <div className="charactercontainer">
-                <img src={this.state.position1.image}></img>
-
-                <h2>{this.state.position1.name}</h2>
-              </div>
-            </div>
-            <div className="position">
-              <div className="charactercontainer">
-                <img
-                  src={this.state.position2.image}
-                  onClick={this.handlePosition2Click}
-                ></img>
-                <h2>{this.state.position2.name}</h2>
-              </div>
-            </div>
-          </div>
-        </container>
-      
-        <Circle className="progressBar" percent={this.state.step*10} strokeWidth="12" strokeColor="#49f46f"/>
-        
-      </div>
-    );
-
-    } else {
+render() {
+    if (this.state.step < 10) {
         return (
-            <><Confetti />
+        <div>
             <container>
-        
-            <div>
-              <div className="row1">
-                <div className="position1">
-                  <div className="charactercontainer1">
-                    <img
-                      src={this.props.chosenCharacter.image}
-                      height="200vh"
-                    ></img>
-
-                    <h2>You</h2>
-                  </div>
-                </div>
-                <div className="position1">
-                  <div className="charactercontainer1 yodapriest">
-                    <img src="./yodapriest.png" height="200vh"></img>
-                  </div>
-                </div>
-
-                <div className="position1">
-                  <div className="charactercontainer1">
-                  
-                    <img
-                      src={this.state.userFavorite.image}
-                      height="200vh"
-                    ></img>
-                    <h2>{this.state.userFavorite.name}</h2>
-                  </div>
-                </div>
-              </div>
-              <h2> Congratulations 🎉</h2>
-              <h2 className="congratsmargin">
-                Yoda has decreed your marriage to {this.state.userFavorite.name}{" "}
-                for all of eternity.
-              </h2>
-              💚
-              <div id="buttonDivWedding">
-             <Link to="/credits"><button className="CreditsPlayAgainButton">Watch Credits</button></Link>
-             <Link to="/character"><button className="CreditsPlayAgainButton">Play Again!</button></Link>
+                <h1>Who is the hottest? 🔥</h1>
+                    <div className="row">
+                        <div className="position" onClick={this.handlePosition1Click}>
+                            <div className="charactercontainer">
+                                <img src={this.state.position1.image}/>
+                                <h2>{this.state.position1.name}</h2>
+                            </div>
+                        </div>
+                        <div className="position">
+                            <div className="charactercontainer">
+                                <img
+                                src={this.state.position2.image}
+                                onClick={this.handlePosition2Click}
+                                />
+                                <h2>{this.state.position2.name}</h2>
+                            </div>
+                        </div>
+                    </div>
+            </container>
+            <Circle className="progressBar" percent={this.state.step*10} strokeWidth="12" strokeColor="#49f46f"/>
+            
         </div>
-        </div>
-          </container>
-          </>
         );
-        }}}
+        } else {
+            return (
+                <>
+                    <Confetti />
+                        <container>
+                    
+                            <div>
+                                <div className="row1">
+                                    <div className="position1">
+                                        <div className="charactercontainer1">
+                                            <img
+                                                src={this.props.chosenCharacter.image}
+                                                height="200vh"
+                                                alt="chosen character"
+                                            />
+                                            <h2>You</h2>
+                                        </div>
+                                    </div>
+                                    <div className="position1">
+                                        <div className="charactercontainer1 yodapriest">
+                                            <img src="./yodapriest.png" height="200vh" alt="yoda priest" />
+                                        </div>
+                                    </div>
+
+                                    <div className="position1">
+                                        <div className="charactercontainer1">
+                                            <img
+                                                src={this.state.userFavorite.image}
+                                                height="200vh"
+                                                alt="favorite"
+                                            />
+                                            <h2>{this.state.userFavorite.name}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2> Congratulations 🎉</h2>
+                                <h2 className="congratsmargin">
+                                    Yoda has decreed your marriage to {this.state.userFavorite.name}{" "}
+                                    for all of eternity.
+                                </h2>
+                                💚
+                                <div id="buttonDivWedding">
+                                    <Link to="/credits"><button className="CreditsPlayAgainButton">Watch Credits</button></Link>
+                                    <Link to="/character"><button className="CreditsPlayAgainButton">Play Again!</button></Link>
+                                </div>
+                            </div>
+                        </container>
+                 </>
+            );
+            }
+        }
+}
 
 const dataSet = [
     {

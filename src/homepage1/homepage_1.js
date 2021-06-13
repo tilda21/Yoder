@@ -9,7 +9,7 @@ class Homepage_1 extends React.Component {
     return (
       <div className="container">
         <Balloon balloonMessage={balloonMessage} />
-        <img src="./yoda.png"></img>;
+        <img src="./yoda.png" alt="yoda"/>;
       </div>
     );
   }

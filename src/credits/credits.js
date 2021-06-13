@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Crawl from "react-star-wars-crawl";
 import "./credits.css";
 
-// Import the necessary styles, or include them another way with your build process
 import "react-star-wars-crawl/lib/index.css";
 
 const useAudio = url => {
@@ -19,7 +18,6 @@ const useAudio = url => {
 };
 
 const Credits = ({ url }) => {
-  //console.log(url)
   const [playing, toggle] = useAudio(url);
 
   return (

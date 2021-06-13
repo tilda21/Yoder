@@ -4,13 +4,12 @@ import './filter_2.css';
 import '../homepage1/homepage_1'
 import Homepage_1 from '../homepage1/homepage_1';
 import { Link } from 'react-router-dom';
-import { DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element, scroller } from 'react-scroll'
 
 
 class FilterByGender extends React.Component {
     constructor(props) {
       super(props);
-      this.scrollToTop = this.scrollToTop.bind(this);
       this.state = {
         gender: '',
         filteredCharacters: [],
@@ -32,24 +31,21 @@ class FilterByGender extends React.Component {
         return filteredCharacters;
     }
 
-    scrollToTop() {
-        scroll.scrollToTop();
-      }
-      scrollTo() {
+    
+    scrollTo() {
         scroller.scrollTo('scroll-to-element', {
-          duration: 1800,
-          delay: 0,
-          smooth: 'easeInOutQuart'
+            duration: 1800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
         })
-      }
+    }
 
         
-    render(){
+    render() {
         return (
          <>
          <Homepage_1 balloonMessage={
             <div className="test1" to="test1" onClick={() => this.scrollTo()}>
-                
                 <h2>First, choose your character:</h2>
                  <button 
                     onClick={this.handleGender} 
@@ -69,8 +65,6 @@ class FilterByGender extends React.Component {
                     className="genderButton">
                         All 
                 </button>
-                
-                
             </div>
          }/>
          <Element name="scroll-to-element" className="element">
@@ -101,10 +95,8 @@ class FilterByGender extends React.Component {
             </Element>
          </>
         )
-
     }
-
-    }
+}
 
 
 export default FilterByGender;

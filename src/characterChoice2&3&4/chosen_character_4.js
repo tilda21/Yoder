@@ -8,8 +8,7 @@ class ChosenCharacter extends Component {
         return s.charAt(0).toUpperCase() + s.slice(1)
       }
 
-    render(){
-        console.log(this.props.chosenCharacter.homeworld, this.props.chosenCharacter.height, this.props.chosenCharacter.species)
+    render() {
 
         return (
         <>
